@@ -13,5 +13,16 @@ UCLASS()
 class PROJECTSTAR_API AEntryHUD : public AHUD
 {
 	GENERATED_BODY()
+
+public:
+	virtual void BeginPlay();
+
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TSubclassOf<class UUserWidget> HudWidgetClass;
+
+	UPROPERTY(BlueprintReadWrite)
+	UUserWidget* HudWidget;
+
 	
 };
